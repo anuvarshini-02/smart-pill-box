@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Smart Pill Box</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Smart Pill Box</h1>
+
+<form id="pillForm">
+  <label>Patient Name</label>
+  <input type="text" id="name" required>
+
+  <label>Tablet Name</label>
+  <input type="text" id="tablet" required>
+
+  <label>Morning</label>
+  <input type="number" id="morning" value="0">
+
+  <label>Afternoon</label>
+  <input type="number" id="afternoon" value="0">
+
+  <label>Night</label>
+  <input type="number" id="night" value="0">
+
+  <label>Total Tablets in Box</label>
+  <input type="number" id="stock" required>
+
+  <button type="submit">Save Details</button>
+</form>
+
+<hr>
+
+<h2>Today’s Status</h2>
+<button onclick="markTaken()">✔ Taken</button>
+<button onclick="markMissed()">❌ Missed</button>
+
+<div id="status"></div>
+
+<hr>
+
+<h2>Calendar Record</h2>
+<ul id="calendar"></ul>
+
+<script src="script.js"></script>
+</body>
+</html>
