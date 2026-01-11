@@ -1,26 +1,28 @@
 const express = require("express");
+const cors = require("cors");
 const path = require("path");
 
 const app = express();
+const PORT = process.env.PORT || 3000;
 
-// Middleware
+app.use(cors());
 app.use(express.json());
 
-// Serve frontend files
+// Serve frontend
 app.use(express.static(path.join(__dirname, "../frontend")));
 
-// Test API
+// Status API
 app.get("/status", (req, res) => {
-  res.json({ status: "Backend is running" });
+  res.json({ running: true });
 });
 
-// Default route → frontend
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../frontend/index.html"));
+// Save API
+app.post("/save", (req, res) => {
+  console.log("Data:", req.body);
+  res.json({ success: true });
 });
 
-// Port for Render
-const PORT = process.env.PORT || 3001;
+// Start server
 app.listen(PORT, () => {
   console.log("Server running on port", PORT);
 });
