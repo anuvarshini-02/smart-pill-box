@@ -47,3 +47,17 @@ The reference implementation demonstrates the **software** concept. In the acade
 
 ## Interview talking points
 Why RFID tag IDs are identifiers, why movement is not equivalent to swallowing, differences between rule-based thresholds and ML, and limits of simulated evaluation.
+## Application Demo
+
+The screenshots below demonstrate simulated RFID and motion monitoring. This prototype is not a medical device and cannot verify medication ingestion.
+
+### Application Dashboard
+![Smart Pill Box dashboard](screenshots/dashboard.1.png)
+
+### Simulated RFID Mismatch Alert
+![Incorrect RFID warning](screenshots/incorrect-rfid.png.png)
+
+### Automated Test Results
+All 6 included automated tests passed locally.
+
+![Automated test results](screenshots/test-results.png.png)
